@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company HR Portal </title>
+    <link rel="icon" href="./images/favicon1.png">
+
+    <style>
+/* Universal Resets & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8; /* Soft ice blue-gray */
+  color: #1e293b;
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #0f172a; /* Dark slate navy */
+  color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Banner Image */
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Main Content & Section Cards */
+section {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #0f4c5c;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #64748b;
+}
+
+/* Registration Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #334155;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+button, input[type="submit"] {
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #0369a1;
+}
+
+/* Employee Directory (Convert plain text alignment) */
+#employee-directory {
+  overflow-x: auto;
+}
+
+/* Recommended: Wrap directory items in a <table> for optimal layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Footer & Map Container */
+footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome to Company HR Portal </h1>
+        <nav>
+        <ul>
+            <li><a href="#employee-registration"> Employee Registration </a></li>
+            <li><a href="#employee-directory"> Employee Directory</a></li>
+            <li><a href="#contact-us"> Contact Us</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <image src="./images/image3.jpg" style="width:100%; height: 300px; object-fit: cover;"></image>
+
+    <section id="employee-registration">
+        <h2> Employee Registration</h2>
+        <p> Fill the below form as <em>employee.</em></p>
+        <form>
+        
+        <label for="name"> Name:</label>
+        <input type="text" id="name"><br><br>
+        <label for="email"> E-mail Id:</label>
+        <input type="text" id="email"><br><br>
+        <label for="password"> Password:</label>
+        <input type="password" id="password"><br><br>
+        <label for="age">Age:</label>
+        <input type="text" id="age"><br><br>
+        <label for="role" Select role:></label>
+        <Select>
+            <option> Software Engineer </option>
+            <option> Product Manager </option>
+            <option> Designer </option>
+            <option> HR representative  </option>
+        </Select><br><br>
+          <label for="joiningdate">Select joining date:</label>
+        <input type="date" id="joining date"><br><br>
+        <input type="submit">
+          </form>
+    </section>
+
+    <section id="employee-directory"> 
+        <h2> Employee Directory </h2>
+        <p> List of all registered employees.</p>
+        <table>
+            <tr> 
+                <th> Employee ID </th>
+                <th> Employee Name  </th>
+                <th> Employee Role </th>
+            </tr>
+
+            <tr>
+                <td> 2345</td>
+                <td> Ankit  </td>
+                <td> Software Engineer  </td>
+            </tr>
+
+            <tr>
+                <td> 2341</td>
+                <td> Aryan  </td>
+                <td> Backend Developer </td>
+            </tr>
+
+            <tr>
+                <td> 2342</td>
+                <td> Khushi  </td>
+                <td> Product Manager  </td>
+            </tr>
+        
+        </table>
+         </section>
+
+         <section id="contact-us">
+            <h2> Contact Us </h2>
+            <p> You can contact us at skyvera@offcial.com or visit us between 9AM-6PM</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.3558239325635!2d75.82412462572807!3d26.923931926640563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db14b1a555bbf%3A0x294068df2fe5d501!2sHawa%20Mahal%2C%20J.D.A.%20Market%2C%20Pink%20City%2C%20Jaipur%2C%20Rajasthan%20302002!5e0!3m2!1sen!2sin!4v1788154647707!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+</section>
+
+<footer>
+    <p>&copy; 2023 Skyvera</p>
+</footer>
+</body>
+</html>
